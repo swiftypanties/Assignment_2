@@ -3,37 +3,26 @@
 
 int main(){
 
-    int mat[10][10];
-    char func = 'S';    // this is where we will store the value to preform functions. 'S' for start to initialize the loop.
-    printf("\nthis is the test matrix\n");
-    int i,j;
-    for(i=0; i<10; i++){
-        for(j=0; j<10; j++){
-            printf("%d ", mat[i][j]);
-        }
-        printf("\n");
-    }
-    
-    //main program is running in a while loop
+    char func = 'S';    // 'S' for start to initialize the loop.
+
     while(func != 'D') {
         // accepts A, B, C, D functions from user
-        printf("Enter an operation: A, B, C, D.");
         scanf("%c", &func);
 
         if(func == 'A'){
-            A(mat);
+            A();
         }
         if(func == 'B'){
             int start, end;
             scanf("%d", &start);
             scanf("%d", &end);
-            B(mat, start, end);
+            B(start, end);
         }
         if(func == 'C'){
             int start, end;
             scanf("%d", &start);
             scanf("%d", &end);
-            C(mat, start, end);
+            C(start, end);
         }
     }
     return 0;

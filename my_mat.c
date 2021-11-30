@@ -1,19 +1,20 @@
 # include <stdio.h>
 # include "my_mat.h"
+#include <string.h>
 #define INF 99999
 
-int A(int arr[10][10]){
+int arr[10][10];
 
+void A(){
     int i, j;
     for (i = 0; i < 10; i++){
         for (j = 0; j < 10; j++){
             scanf("%d", &arr[i][j]);
         }
     }
-    return 0;
 }
 
-void B(int graph[][10], int start, int end){
+void B(int start, int end){
     int copy[10][10], i, j, k;
     // create a copy to work inside the function(releasing memory when scope ends)
     for (i = 0; i < 10; i++){       
@@ -22,11 +23,11 @@ void B(int graph[][10], int start, int end){
             if(i==j){
                 copy[i][j]=0;  
             }
-            else if(graph[i][j]==0 ){
+            else if(arr[i][j]==0 ){
                 copy[i][j]=INF; 
             }
             else {
-                copy[i][j] = graph[i][j];
+                copy[i][j] = arr[i][j];
             }
         }
     }                                           
@@ -49,7 +50,7 @@ void B(int graph[][10], int start, int end){
     
 }
 
-void C(int graph[][10], int start, int end){
+void C(int start, int end){
     int copy[10][10], i, j, k;
     // create a copy to work inside the function(releasing memory when scope ends)
     for (i = 0; i < 10; i++){                   
@@ -58,11 +59,11 @@ void C(int graph[][10], int start, int end){
             if(i==j){
                 copy[i][j]=0;  
             }
-            else if(graph[i][j]==0 ){
+            else if(arr[i][j]==0 ){
                 copy[i][j]=INF; 
             }
             else {
-                copy[i][j] = graph[i][j];
+                copy[i][j] = arr[i][j];
             }
         }
     }    

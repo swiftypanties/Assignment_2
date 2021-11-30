@@ -20,4 +20,4 @@ my_mat.o: my_mat.c my_mat.h
 
 .PHONY: clean
 clean:
-	rm -f connections *.o *.a *.so 
+	rm -f connections *.o *.a *.so
