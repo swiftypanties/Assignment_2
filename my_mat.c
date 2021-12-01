@@ -1,5 +1,6 @@
 # include <stdio.h>
 # include "my_mat.h"
+
 #define INF 99999
 
 // int test1[10][10] ={

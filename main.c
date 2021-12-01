@@ -1,8 +1,8 @@
 # include <stdio.h>
 # include "my_mat.h"
 
+
 int main(){
-    
     char func = 'S';    // 'S' for start to initialize the loop.
 
     while(func != 'D') {
